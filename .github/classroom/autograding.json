@@ -1,0 +1,24 @@
+{
+  "tests": [  
+    {
+      "name": "Test Producer",
+      "setup": "",
+      "run": "cd kafka-producer; mvn -q -DskipTests=false clean test",
+      "input": "",
+      "output": "",
+      "comparison": "",
+      "timeout": 2,
+      "points": 5
+    },
+    {
+      "name": "Test Consumer",
+      "setup": "",
+      "run": "cd kafka-consumer; mvn -q -DskipTests=false clean package",
+      "input": "",
+      "output": "",
+      "comparison": "",
+      "timeout": 2,
+      "points": 5
+    }
+  ]
+}
