@@ -42,10 +42,10 @@ public class Application {
             //--ProducerRecord<Long, String> record = new ProducerRecord(TOPIC, partition, timestamp, key, value);
 
             //Use key, let kafka client library choose partition based on hash of key
-            //--ProducerRecord<Long, String> record = new ProducerRecord(TOPIC, key, value);
+            ProducerRecord<Long, String> record = new ProducerRecord(TOPIC, key, value);
 
             //left out key, messages sent using round-robin strategy
-            ProducerRecord<Long, String> record = new ProducerRecord(TOPIC, value);
+            //ProducerRecord<Long, String> record = new ProducerRecord(TOPIC, value);
 
             //Send record to kafka and get result
             RecordMetadata recordMetadata = kafkaProducer.send(record).get();
