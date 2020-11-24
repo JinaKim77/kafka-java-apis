@@ -50,7 +50,7 @@ public class Application {
             //Send record to kafka and get result
             RecordMetadata recordMetadata = kafkaProducer.send(record).get();
 
-            System.out.println(String.format("Record with (key: %s, value: %s) was sent to (partition: %d , offset: %d",
+            System.out.println(String.format("Record with (key: %d, value: %s) was sent to (partition: %d , offset: %d",
                     record.key(), record.value(), recordMetadata.partition(), recordMetadata.offset()));
         }
     }
